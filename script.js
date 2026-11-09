@@ -10,7 +10,7 @@ function renderVideos(category,grid){
     const figure=document.createElement("figure");figure.className="video-card";
     const frame=document.createElement("div");frame.className="video-frame";
     const label=document.createElement("span");label.className="video-overline";label.textContent=labels[category];
-    const video=document.createElement("video");video.src=`media/${category==="ai"?"ai":"localization"}/${file}`;video.controls=true;video.preload="metadata";video.playsInline=true;video.setAttribute("aria-label",`${labels[category]} portfolio sample ${index+1}`);
+    const video=document.createElement("video");video.src=`/${category==="ai"?"ai":"localization"}/${file}`;video.controls=true;video.preload="metadata";video.playsInline=true;video.setAttribute("aria-label",`${labels[category]} portfolio sample ${index+1}`);
     frame.append(label,video);
     const caption=document.createElement("figcaption");caption.className="video-caption";
     const title=document.createElement("span");title.textContent=category==="localization"?localizationLanguages[index]:`AI UGC — ${String(index+1).padStart(2,"0")}`;
